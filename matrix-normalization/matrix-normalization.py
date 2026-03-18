@@ -18,7 +18,7 @@ def matrix_normalization(matrix, axis=None, norm_type='l2'):
         norm = np.sqrt(np.sum(matrix**2, axis=axis, keepdims=True))
 
     elif norm_type == 'max':
-        norm = np.max(matrix, axis=axis, keepdims=True)
+        norm = np.max(np.abs(matrix), axis=axis, keepdims=True)
 
     else:
         return None
