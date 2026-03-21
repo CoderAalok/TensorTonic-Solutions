@@ -13,6 +13,7 @@ def matrix_inverse(A):
     A_inv = np.linalg.inv(A)
     I = A@A_inv
     res = np.linalg.norm((A@A_inv - I))
-    return A_inv
+    if res < 10**-7:
+        return A_inv
     
     
