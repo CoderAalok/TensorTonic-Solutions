@@ -6,8 +6,11 @@ def make_diagonal(v):
     """
     # Write code here
     v = np.array(v)
-    matrix = np.zeros((v.size, v.size))
-    for i,val in enumerate(v):
-        matrix[i,i] = val
-    return matrix
+    return np.diag(v)
+    
+    # matrix = np.zeros((v.size, v.size))
+    # for i,val in enumerate(v):
+    #     matrix[i,i] = val
+    # return matrix
+    
     
